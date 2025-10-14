@@ -1,0 +1,20 @@
+contacts = {}
+
+while True:
+    action = input("Add/View/Search/Delete/Quit (a/v/s/d/q): ").lower()
+    if action == 'a':
+        name = input("Enter name: ")
+        phone = input("Enter phone number: ")
+        contacts[name] = phone
+    elif action == 'v':
+        print("Contacts:", contacts)
+    elif action == 's':
+        name = input("Enter name to search: ")
+        print(contacts.get(name, "Contact not found"))
+    elif action == 'd':
+        name = input("Enter name to delete: ")
+        contacts.pop(name, None)
+    elif action == 'q':
+        break
+    else:
+        print("Invalid option")
