@@ -1,0 +1,10 @@
+filename = input("Enter filename: ")
+try:
+    with open(filename, 'r') as f:
+        text = f.read()
+    words = text.split()
+    print("Lines:", len(text.splitlines()))
+    print("Words:", len(words))
+    print("Characters:", len(text))
+except FileNotFoundError:
+    print("File not found")
