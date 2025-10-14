@@ -1,0 +1,14 @@
+import requests
+from collections import Counter
+from bs4 import BeautifulSoup
+
+url = input("Enter URL: ")
+try:
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, "html.parser")
+    text = soup.get_text().lower()
+    words = text.split()
+    word_count = Counter(words)
+    print("Most common words:", word_count.most_common(10))
+except:
+    print("Failed to fetch URL")
