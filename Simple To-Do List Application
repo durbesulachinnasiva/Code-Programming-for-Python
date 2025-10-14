@@ -1,0 +1,19 @@
+todo_list = []
+
+while True:
+    action = input("Add/View/Delete/Quit (a/v/d/q): ").lower()
+    if action == 'a':
+        task = input("Enter a task: ")
+        todo_list.append(task)
+    elif action == 'v':
+        print("To-Do List:", todo_list)
+    elif action == 'd':
+        task = input("Enter task to delete: ")
+        if task in todo_list:
+            todo_list.remove(task)
+        else:
+            print("Task not found.")
+    elif action == 'q':
+        break
+    else:
+        print("Invalid option")
