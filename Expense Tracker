@@ -1,0 +1,19 @@
+expenses = []
+
+while True:
+    action = input("Add/View/Total/Quit (a/v/t/q): ").lower()
+    if action == 'a':
+        expense = float(input("Enter expense amount: "))
+        expenses.append(expense)
+    elif action == 'v':
+        print("Expenses:", expenses)
+    elif action == 't':
+        if expenses:
+            print("Total:", sum(expenses))
+            print("Average:", sum(expenses)/len(expenses))
+        else:
+            print("No expenses recorded")
+    elif action == 'q':
+        break
+    else:
+        print("Invalid option")
