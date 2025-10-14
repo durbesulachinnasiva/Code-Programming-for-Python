@@ -1,0 +1,30 @@
+import numpy as np
+
+# a. Get help on the add function
+help(np.add)
+
+# b. Test whether none of the elements of a given array is zero
+arr = np.array([1, 2, 3, 4])
+print("None of the elements are zero:", np.all(arr != 0))
+
+# c. Element-wise comparisons of two arrays
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([2, 2, 3, 5])
+
+print("Greater:", np.greater(arr1, arr2))
+print("Greater or equal:", np.greater_equal(arr1, arr2))
+print("Less:", np.less(arr1, arr2))
+print("Less or equal:", np.less_equal(arr1, arr2))
+print("Equal:", np.equal(arr1, arr2))
+print("Equal within a tolerance:", np.allclose(arr1, arr2))
+
+# Additional examples of other requested functions
+zeros_arr = np.zeros(5)
+ones_arr = np.ones(5)
+linspace_arr = np.linspace(0, 10, 5)
+arr_list = arr1.tolist()
+
+print("Zeros:", zeros_arr)
+print("Ones:", ones_arr)
+print("Linspace:", linspace_arr)
+print("Array to list:", arr_list)
