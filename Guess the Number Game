@@ -1,0 +1,15 @@
+import random
+
+number = random.randint(1, 50)
+attempts = 0
+
+while True:
+    guess = int(input("Guess the number (1-50): "))
+    attempts += 1
+    if guess < number:
+        print("Higher!")
+    elif guess > number:
+        print("Lower!")
+    else:
+        print(f"Correct! You guessed in {attempts} attempts.")
+        break
