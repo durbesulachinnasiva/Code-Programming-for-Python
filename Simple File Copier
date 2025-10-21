@@ -1,0 +1,5 @@
+src = input("Enter source file: ")
+dest = input("Enter destination file: ")
+with open(src, 'r') as f1, open(dest, 'w') as f2:
+    f2.write(f1.read())
+print("File copied successfully.")
