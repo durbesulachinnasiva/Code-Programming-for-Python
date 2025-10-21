@@ -1,0 +1,6 @@
+import string
+s = input("Enter a sentence: ").lower()
+if set(string.ascii_lowercase).issubset(set(s)):
+    print("It’s a pangram!")
+else:
+    print("Not a pangram.")
