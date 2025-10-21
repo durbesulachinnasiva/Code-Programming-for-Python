@@ -1,0 +1,3 @@
+usd = float(input("Enter amount in USD: "))
+inr = usd * 84.25  # example rate
+print("Equivalent in INR:", inr)
