@@ -1,0 +1,7 @@
+T = int(input())  # Number of test cases
+
+for _ in range(T):
+    X, Y = map(int, input().split())  # Read X (earned) and Y (tax threshold)
+    # Minimum investment needed to not pay tax
+    invest = X - Y
+    print(invest)
